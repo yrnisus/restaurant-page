@@ -1,9 +1,30 @@
-#icon {
-    background: url('./images/1.png');
-    opacity: 0;
+html { 
+    background: url(images/bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+header, .header-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+     height: 70px;;
 }
 
-#icon img {
-    height: 100px;
-    width: auto;
+.header-wrapper {
+    gap: 40px;
+    color: #fff;
+    padding-bottom: 5px;
+    font-size: 50px;
+}
+
+.header-wrapper > div + div::before {
+    content: "|";
+    margin-right: 40px;
+}
+
+.header-wrapper > div.active {
+    border-bottom: 3px solid #fff;
 }
