@@ -20,11 +20,22 @@ header, .header-wrapper {
     font-size: 50px;
 }
 
-.header-wrapper > div + div::before {
+/* .header-wrapper > div + div::before {
     content: "|";
-    margin-right: 40px;
-}
+} */
 
 .header-wrapper > div.active {
     border-bottom: 3px solid #fff;
+}
+
+.body-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.title {
+    color: #fff;
+    font-size: 150px;
 }

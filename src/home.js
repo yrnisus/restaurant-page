@@ -1,8 +1,12 @@
 export default function pageLoad() {
-    
-    const header = document.createElement('div');
-    header.innerHTML = 
-    "<header><div class='header-wrapper'><div class='active'>Home</div><div>Menu</div><div>About</div></div class='header-wrapper'></header>"
+    const content = document.createElement('div');
+    content.appendChild(createHeader());
+    content.appendChild(createBody());
+    return content;
+}
 
-    return header;
+function createBody() {
+    const body = document.createElement('div');
+    body.innerHTML = "<div class='body-wrapper'><h1 class='title'>Wasa Bae</h1></div>";
+    return body;
 }
