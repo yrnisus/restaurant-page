@@ -1,41 +1,102 @@
-html { 
-    background: url(images/bg.jpg) no-repeat center center fixed; 
+:root {
+    --nav-color: red;
+  }
+
+html {
+    /* background: url(images/bg.jpg) no-repeat center center fixed; */
+    background: #fff;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
+}
 
-header, .header-wrapper {
+#content {
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
-     height: 70px;;
-}
-
-.header-wrapper {
-    gap: 40px;
-    color: #fff;
-    padding-bottom: 5px;
-    font-size: 50px;
-}
-
-/* .header-wrapper > div + div::before {
-    content: "|";
-} */
-
-.header-wrapper > div.active {
-    border-bottom: 3px solid #fff;
-}
-
-.body-wrapper {
-    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+header,
+.header-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 70px;
+    ;
+}
+
+.header-wrapper {
+    gap: 40px;
+    color: var(--nav-color);
+    padding-bottom: 5px;
+    font-size: 50px;
+}
+.header-wrapper>div {
+    cursor: pointer;
+}
+
+.header-wrapper>div:hover {
+    border-bottom: 3px solid var(--nav-color);
+}
+
+.header-wrapper>div.active {
+    border-bottom: 3px solid var(--nav-color);
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .title {
-    color: #fff;
     font-size: 150px;
+    color: #C6562B;
+}
+
+#icon {
+    height: 500px;
+    background: url('./images/bg-icon.jpg');
+}
+
+.title-btn-wrapper {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    gap: 20px
+}
+
+#reservation-btn, #order-btn {
+    height: 50px;
+    width: 200px;
+    border: none;
+    font-size: 22px;
+}
+
+#reservation-btn {
+    background-color: #C6562B;
+    color: #fff;
+}
+
+#order-btn {
+    background-color: #FFF;
+    color: black;
 }

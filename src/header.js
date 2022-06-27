@@ -1,5 +1,5 @@
 export default function createHeader() {
-    const header = document.createElement('div');
+    const header = document.createElement('header');
     header.innerHTML = 
     "<header><div class='header-wrapper'><div class='active nav' id='home-btn'>Home</div>|<div class ='nav' id='menu-btn'>Menu</div>|<div class='nav' id='about-btn'>About</div></div class='header-wrapper'></header>"
     

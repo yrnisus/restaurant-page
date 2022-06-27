@@ -1,18 +1,20 @@
-console.log('Hello');
 import './style.css';
-import pageLoad from './home.js'
-import createHeader from './header';
+import pageLoad from './home.js';
+import createHeader from './header.js';
 
 
 const content = document.createElement('div');
 content.classList.add('content');
+document.body.appendChild(content);
+
+
 // header
 content.appendChild(createHeader());
 
 
-// content.appendChild(pageLoad());
+//body
+content.appendChild(pageLoad());
 
-document.body.appendChild(content);
 
 
 const homeBtn = document.getElementById
