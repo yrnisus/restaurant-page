@@ -3,12 +3,17 @@
   }
 
 html {
-    /* background: url(images/bg.jpg) no-repeat center center fixed; */
-    background: #fff;
+    background: url(images/bg.jpg) no-repeat center center fixed;
+    /* background: #fff; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+body {
+    padding: 0;
+    margin: 0;
 }
 
 #content {
@@ -19,23 +24,23 @@ html {
 }
 
 
-
 header {
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 0;
     width: 100%;
+    background-color: #fff;
+    border: 1px solid red;
+    height: 100px;
 }
 
-header,
+
 .header-wrapper {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    height: 70px;
-    ;
-}
-
-.header-wrapper {
+    align-items: center;
     gap: 40px;
     color: var(--nav-color);
     padding-bottom: 5px;
@@ -53,6 +58,9 @@ header,
     border-bottom: 3px solid var(--nav-color);
 }
 
+.header-wrapper img {
+    cursor: pointer;
+}
 .main {
     height: 100vh;
     display: flex;
@@ -69,12 +77,19 @@ header,
 
 .title {
     font-size: 150px;
-    color: #C6562B;
+    color: #fff;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #icon {
     height: 500px;
-    background: url('./images/bg-icon.jpg');
+    background: url('./images/logo.jpg');
 }
 
 .title-btn-wrapper {
@@ -84,19 +99,12 @@ header,
     gap: 20px
 }
 
-#reservation-btn, #order-btn {
+#order-btn {
     height: 50px;
-    width: 200px;
+    width: 400px;
     border: none;
     font-size: 22px;
-}
-
-#reservation-btn {
     background-color: #C6562B;
     color: #fff;
-}
-
-#order-btn {
-    background-color: #FFF;
-    color: black;
+    border-radius: 25px;
 }

@@ -1,4 +1,5 @@
-import Icon from './images/sushi-small.png';
+import Logo from './images/logo-transparent.png';
+import bgImage from './images/bg.jpg';
 
 export default function pageLoad() {
     return createMain();
@@ -12,20 +13,29 @@ function createMain() {
     //create title-wrapper div
     const titleWrapper = document.createElement('div');
     titleWrapper.classList.add('title-wrapper');
-    titleWrapper.innerHTML = "<div class='title'>Wasa Bae</div>";
 
-    //add sushi icon
-    const myIcon = new Image();
-    myIcon.src = Icon;
-    titleWrapper.appendChild(myIcon);
+    //title column
+    const titleContainer = document.createElement('div');
+    titleContainer.classList.add('title-container');
+    titleContainer.innerHTML = "<div class='title'>Wasa Bae</div>";
+    const orderBtn = document.createElement('button');
+    orderBtn.setAttribute('id', 'order-btn');
+    orderBtn.innerHTML = "Order now";
+    titleContainer.appendChild(orderBtn);
+    titleWrapper.appendChild(titleContainer);
 
-    //create title-btn
-    const titleBtns = document.createElement('div');
-    titleBtns.classList.add('title-btn-wrapper');
-    titleBtns.innerHTML="<button id='reservation-btn'>Make a reservation</button><button id='order-btn'>Order online</button>"
+
+    //add sushi logo to right of title
+    const myLogo = new Image();
+    myLogo.src = Logo;
+    titleWrapper.appendChild(myLogo);
+
+    // //create title-btn
+    // const titleBtns = document.createElement('div');
+    // titleBtns.classList.add('title-btn-wrapper');
+    // titleBtns.innerHTML="<button id='order-btn'>Order online</button>"
 
     main.appendChild(titleWrapper);
 
-    main.appendChild(titleBtns);
     return main;
 }
