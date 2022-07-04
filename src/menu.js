@@ -1,3 +1,4 @@
+import toggleBG from './bg-toggle.js';
 export default function menuLoad() {
     return createMenu();
 }
@@ -19,6 +20,8 @@ function createMenu() {
 }
 
 function generateCards(images) {
+
+    toggleBG('menu');
 
     const menuCardContainer = document.createElement('div');
     menuCardContainer.classList.add('menuCardContainer');

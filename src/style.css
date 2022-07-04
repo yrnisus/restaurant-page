@@ -2,11 +2,11 @@
 
 :root {
     --nav-color: red;
+    --pink: #EC8388;
   }
 
 html {
     font-family: 'Bree Serif', serif;
-    background: url(images/bg.jpg) no-repeat center center fixed;
     /* background: #fff; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -15,11 +15,12 @@ html {
 }
 
 body {
+    background: url(images/bg.jpg) no-repeat center center fixed;
     padding: 0;
     margin: 0;
 }
 
-#content {
+.content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -144,4 +145,59 @@ header {
 
 .menuImg {
 
+}
+
+/* About */
+
+.about {
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+    height: 50%;
+    width: 50%;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about-title {
+    font-family: 'Yellowtail', cursive;
+    letter-spacing: 25px;
+    color: white;
+    font-size: 150px;
+    font-weight: bold;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: var(--pink)
+}
+
+.pink {
+    color: var(--pink);
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #FFF;
+}
+.about-text-bg {
+   display: flex;
+   justify-content: center;
+    width: 700px;
+    height: 500px;
+}
+
+.about-text {
+    color: #FFF;
+    font-size: 30px;
+    text-align: center;
+}
+
+/* BGs */
+
+.aboutBGActive {
+    background: url(images/about.jpg) no-repeat center center fixed;
+}
+
+.menuBGActive {
+    background: url(images/menu.jpg) no-repeat center center fixed;
+}
+
+.homeBGActive {
+    background: url(images/bg.jpg) no-repeat center center fixed;
 }

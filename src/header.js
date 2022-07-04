@@ -1,9 +1,11 @@
-import pageLoad from './home';
+import pageLoad from './home.js';
 import Icon from './images/logo-icon-75.jpg';
 import menuLoad from './menu.js';
 import aboutLoad from './about.js';
 
+
 export default function createHeader() {
+
     const headerWrapper = document.createElement('div');
     headerWrapper.classList.add('header-wrapper');
 

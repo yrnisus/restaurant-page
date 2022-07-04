@@ -1,11 +1,12 @@
 import Logo from './images/logo-transparent.png';
-import bgImage from './images/bg.jpg';
+import toggleBG from './bg-toggle.js';
 
 export default function pageLoad() {
     return createMain();
 }
 
 function createMain() {
+    toggleBG('home');
     //create  main div
     const main = document.createElement('div');
     main.classList.add('main');

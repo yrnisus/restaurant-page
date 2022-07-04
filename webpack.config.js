@@ -8,7 +8,7 @@ module.exports = {
 },
 plugins: [
   new HtmlWebpackPlugin({
-    title: 'Output Management',
+    title: 'Wasa Bae',
   }),
 ],
   output: {
