@@ -1,8 +1,9 @@
 import pageLoad from './home';
 import Icon from './images/logo-icon-75.jpg';
+import menuLoad from './menu.js';
+import aboutLoad from './about.js';
 
 export default function createHeader() {
-    const header = document.createElement('header');
     const headerWrapper = document.createElement('div');
     headerWrapper.classList.add('header-wrapper');
 
@@ -21,23 +22,16 @@ export default function createHeader() {
     headerWrapper.appendChild(myIcon);
     // headerWrapper.innerHTML =
     //     "<div class ='nav' id='menu-btn'>Menu</div>|<div class='nav' id='about-btn'>About</div>"
-    header.appendChild(headerWrapper);
-    
-     //About btn
-     const aboutBtn = document.createElement('div');
-     aboutBtn.textContent = "About";
-     aboutBtn.setAttribute('id', 'about-btn');
-     aboutBtn.classList.add('nav');
-     headerWrapper.appendChild(aboutBtn);
 
-
-    myIcon.addEventListener('click', () => {
-        pageLoad();
-    })
-
+    //About btn
+    const aboutBtn = document.createElement('div');
+    aboutBtn.textContent = "About";
+    aboutBtn.setAttribute('id', 'about-btn');
+    aboutBtn.classList.add('nav');
+    headerWrapper.appendChild(aboutBtn);
 
     // On click of a nav item adds active class adding bottom border and removing class from other navBtn
-    const navBtn = header.querySelectorAll('.nav');
+    const navBtn = headerWrapper.querySelectorAll('.nav');
     navBtn.forEach((nav) => {
         nav.addEventListener('click', () => {
             for (let i = 0; i < navBtn.length; i++) {
@@ -48,6 +42,23 @@ export default function createHeader() {
         })
     })
 
-    return header;
-}
+    //Home page listener
+    myIcon.addEventListener('click', () => {
+        const content = document.querySelector('.content');
+        content.replaceChildren(pageLoad());
+    })
 
+    //Menu page listener
+    menuBtn.addEventListener('click', () => {
+        const content = document.querySelector('.content');
+        content.replaceChildren(menuLoad());
+    })
+
+    //About page listener
+    aboutBtn.addEventListener('click', () => {
+        const content = document.querySelector('.content');
+        content.replaceChildren(aboutLoad());
+    })
+
+    return headerWrapper;
+}

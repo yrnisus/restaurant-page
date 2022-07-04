@@ -17,7 +17,7 @@ function createMain() {
     //title column
     const titleContainer = document.createElement('div');
     titleContainer.classList.add('title-container');
-    titleContainer.innerHTML = "<div class='title'>Wasa Bae</div>";
+    titleContainer.innerHTML = "<div class='title'>Wasa Bae</div><div class='title-location'>West Palm, FL</div>";
     const orderBtn = document.createElement('button');
     orderBtn.setAttribute('id', 'order-btn');
     orderBtn.innerHTML = "Order now";

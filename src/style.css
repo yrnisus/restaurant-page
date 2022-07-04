@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Yellowtail&display=swap');
+
 :root {
     --nav-color: red;
   }
 
 html {
+    font-family: 'Bree Serif', serif;
     background: url(images/bg.jpg) no-repeat center center fixed;
     /* background: #fff; */
     -webkit-background-size: cover;
@@ -32,7 +35,6 @@ header {
     top: 0;
     width: 100%;
     background-color: #fff;
-    border: 1px solid red;
     height: 100px;
 }
 
@@ -51,11 +53,11 @@ header {
 }
 
 .header-wrapper>div:hover {
-    border-bottom: 3px solid var(--nav-color);
+    border-bottom: 5px solid var(--nav-color);
 }
 
 .header-wrapper>div.active {
-    border-bottom: 3px solid var(--nav-color);
+    border-bottom: 5px solid var(--nav-color);
 }
 
 .header-wrapper img {
@@ -72,21 +74,27 @@ header {
 .title-wrapper {
     display: flex;
     align-items: center;
+    color: #fff;
     gap: 20px;
 }
 
 .title {
     font-size: 150px;
-    color: #fff;
+    font-family: 'Yellowtail', cursive;
+    height: 150px;
 }
 
 .title-container {
+    gap: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
+.title-location {
+    font-size: 24px;
+    /* font-family: 'Bree Serif', serif; */
+}
 #icon {
     height: 500px;
     background: url('./images/logo.jpg');
@@ -100,11 +108,40 @@ header {
 }
 
 #order-btn {
+    margin-top: 10px;
     height: 50px;
     width: 400px;
     border: none;
-    font-size: 22px;
+    font-size: 28px;
     background-color: #C6562B;
     color: #fff;
     border-radius: 25px;
+    cursor: pointer;
+}
+
+
+/* menu section */
+
+.menu {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.menuCardContainer {
+    display: grid;
+    grid-template: 300px / repeat(4, 300px);
+    gap:20px;
+}
+
+.menuCard {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+}
+
+.menuImg {
+
 }
